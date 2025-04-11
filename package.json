@@ -1,0 +1,27 @@
+{
+    "name": "xbeats-mcp",
+    "version": "1.0.1",
+    "type": "module",
+    "bin": {
+        "xbeats-mcp": "build/index.js"
+    },
+    "scripts": {
+        "build": "tsc && shx chmod +x build/*.js",
+        "start": "node build/index.js",
+        "prepublishOnly": "npm run build"
+    },
+    "files": [
+        "build/**/*.js"
+    ],
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.9.0",
+        "axios": "^1.8.4",
+        "crypto-js": "^4.2.0"
+    },
+    "devDependencies": {
+        "@types/crypto-js": "^4.2.2",
+        "@types/node": "^22.14.0",
+        "shx": "^0.4.0",
+        "typescript": "^5.8.3"
+    }
+}
